@@ -45,7 +45,7 @@ function add_custom_push_notification($data = array()) {
     global $wpdb;
 
     $notificaiton_data = array(
-        'post_type'      => 'events',
+        'post_type'      => 'event',
         'post_id'        => (int)$data['post_id'],
         'message'        => esc_sql($data['message']),
         'scheduled_date' => date(CN_DATE_TIME_FORMAT, strtotime($data['scheduled_date'])),
@@ -73,7 +73,7 @@ function edit_custom_push_notification($data = array(),$cn_id = 0) {
     global $wpdb;
 
     $notificaiton_data = array(
-        'post_type'      => 'events',
+        'post_type'      => 'event',
         'post_id'        => (int)$data['post_id'],
         'message'        => esc_sql($data['message']),
         'scheduled_date' => date(CN_DATE_TIME_FORMAT, strtotime($data['scheduled_date'])),
