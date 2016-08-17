@@ -1,0 +1,22 @@
+{
+	"name": "soumyaAbi/Custom-Event-Push-Notification",
+	"description": "Custom push notification based on a event can be set and send to customers",
+	"homepage": "https://github.com/soumyaAbi/Custom-Event-Push-Notification",
+	"keywords": [
+		"wordpress"
+	],
+	"authors": [
+		{
+			"name": "Sankar Vijayakumar",
+                	"email": "sanker03@yahoo.com"
+		}
+	],
+	"support"    : {
+			"issues": "https://github.com/soumyaAbi/Custom-Event-Push-Notification/issues",
+			"source": "https://github.com/soumyaAbi/Custom-Event-Push-Notification"
+	},
+	"type": "wordpress-plugin",
+	"require": {
+		"composer/installers": "~1.0"
+	 }
+}
