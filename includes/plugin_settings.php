@@ -97,7 +97,7 @@ function push_notifications_list() {
  */
 function get_published_events_list() {
     $args=array(
-        'post_type'        => 'event',
+        'post_type'        => 'events',
         'post_status'      => 'publish',
         'posts_per_page'   => -1,
         'caller_get_posts' => 1
