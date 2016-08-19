@@ -17,7 +17,7 @@ function custom_push_notification_activation()
         CREATE TABLE IF NOT EXISTS `".$table_name."` (
           `cn_id` int(11) NOT NULL AUTO_INCREMENT,
           `post_id` int(11) NOT NULL,
-          `post_type` varchar(32) NOT NULL DEFAULT 'events',
+          `post_type` varchar(32) NOT NULL DEFAULT 'event',
           `time_zone` varchar(50) NOT NULL DEFAULT '".SERVER_TIME_ZONE."',
           `message` text NOT NULL,
           `scheduled_date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
@@ -45,7 +45,7 @@ function add_custom_push_notification($data = array()) {
     global $wpdb;
 
     $notificaiton_data = array(
-        'post_type'      => 'events',
+        'post_type'      => 'event',
         'post_id'        => (int)$data['post_id'],
         'message'        => esc_sql($data['message']),
         'scheduled_date' => date(CN_DATE_TIME_FORMAT, strtotime($data['scheduled_date'])),
@@ -73,7 +73,7 @@ function edit_custom_push_notification($data = array(),$cn_id = 0) {
     global $wpdb;
 
     $notificaiton_data = array(
-        'post_type'      => 'events',
+        'post_type'      => 'event',
         'post_id'        => (int)$data['post_id'],
         'message'        => esc_sql($data['message']),
         'scheduled_date' => date(CN_DATE_TIME_FORMAT, strtotime($data['scheduled_date'])),
